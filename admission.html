@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission - ESI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-titre">
+            <img src="logo.webp" alt="Logo ESI" style="height: 80px;">
+            <h1>École Supérieure d'Informatique (ESI)</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="academie.html">Académie</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Rejoignez-nous</h2>
+        <p>Découvrez nos programmes et suivez les étapes pour intégrer notre établissement.</p>
+    </section>
+
+    <section class="exigences">
+        <h2>Exigences</h2>
+        <p>
+            Peuvent prendre part au concours d’entrée les candidats titulaires d’un baccalauréat C, D ou E.
+            Comme à l’IUT, les étudiants accèdent à la licence par concours. Il existe deux licences : Systèmes d’Information et Réseaux & Systèmes.
+            Il existe également deux masters, dont les étudiants sont recrutés sur sélection de dossiers par une commission : Systèmes d’Information et Réseaux & Systèmes.
+        </p>
+    </section>
+
+    <section class="formulaire">
+        <h2>Formulaire de préinscription</h2>
+        <form action="submit_admission.php" method="POST" enctype="multipart/form-data">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required>
+
+            <label for="numero">Numéro de téléphone :</label>
+            <input type="tel" id="numero" name="numero" required>
+
+            <label for="ine">Identifiant National Étudiant (INE) :</label>
+            <input type="text" id="ine" name="ine" required>
+
+            <label for="diplome">Diplôme :</label>
+            <input type="file" id="diplome" name="diplome" accept=".pdf,.jpg,.png" required>
+
+            <label for="attestation">Attestation de réussite au test d'entrée :</label>
+            <input type="file" id="attestation" name="attestation" accept=".pdf,.jpg,.png" required>
+
+            <label for="photo">Photo d'identité :</label>
+            <input type="file" id="photo" name="photo" accept=".jpg,.png" required>
+
+            <label for="motivation">Lettre de motivation :</label>
+            <textarea id="motivation" name="motivation" rows="6" placeholder="Rédigez ici votre lettre de motivation..." required></textarea>
+
+            <button type="submit">Envoyer la candidature</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 École Supérieure d'Informatique (ESI). Tous droits réservés.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=100077556601331&locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.univ-bobo.gov.bf/etablissements/ufr-institut-cu/ecole-superieure-dinformatique" target="_blank"><i class="fab fa-google"></i></a>
+        </div>
+        <div class="credits">
+            <p>Site réalisé par Soulama Arnold et Sanou Kevine</p>
+        </div>
+    </footer>
+</body>
+</html>
