@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie - ESI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo-titre">
+      <img src="logo.webp" alt="Logo ESI" style="height: 80px;">
+      <h1>École Supérieure d'Informatique (ESI)</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="academie.html">Académie</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="galerie-container">
+    <div class="photo-card">
+      <img src="salle.webp" alt="Salle de cours">
+      <p>Salle de cours</p>
+    </div>
+    <div class="photo-card">
+      <img src="administration.jpg" alt="Administration">
+      <p>Administration</p>
+    </div>
+    <div class="photo-card">
+      <img src="bibliotheque.webp" alt="Bibliothèque">
+      <p>Bibliothèque</p>
+    </div>
+    <div class="photo-card">
+      <img src="laboratoire.jpg" alt="Laboratoire">
+      <p>Laboratoire</p>
+    </div>
+    <div class="photo-card">
+      <img src="eleves.jpg" alt="Photos des élèves">
+      <p>Photos des élèves</p>
+    </div>
+  </main>
+
+  <!-- Partie pour JavaScript -->
+  <div id="lightbox" class="lightbox" style="display:none;" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.photo-card img').forEach(img => {
+      img.addEventListener('click', (e) => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 École Supérieure d'Informatique (ESI). Tous droits réservés.</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=100077556601331&locale=fr_FR" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.univ-bobo.gov.bf/etablissements/ufr-institut-cu/ecole-superieure-dinformatique" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+    <div class="credits">
+      <p>Site réalisé par Soulama Arnold et Sanou Kevine.</p>
+    </div>
+  </footer>
+</body>
+</html>
