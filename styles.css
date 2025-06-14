@@ -342,3 +342,38 @@ footer {
     word-break: break-word;
   }
 }
+@media (max-width: 768px) {
+  /* Ajustements pour les tableaux dans la section calendrier */
+  .calendrier {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .calendrier table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    background: #fff;
+    }
+    .calendrier th,
+    .calendrier td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    white-space: nowrap; /* Empêche le retour à la ligne dans les cellules */
+    }
+    .calendrier th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Assure que l'en-tête reste au-dessus du contenu lors du défilement */
+    }
+    .calendrier td {
+    background-color: #fff;
+    }
+    /* Rendre les tableaux scrollables horizontalement sur mobile */
+    .calendrier {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    }
