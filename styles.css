@@ -1,7 +1,20 @@
+/* Palette de couleurs principale */
+:root {
+  --bleu-fonce: #002855;
+  --bleu-moyen: #0055aa;
+  --orange: #ff8800;
+  --orange-hover: #ff9900;
+  --gris-clair: #f0f2f5;
+  --blanc: #fff;
+  --jaune: #ffd700;
+  --gris-fonce: #222b38;
+}
+
+/* Reset */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* Accueil principal avec bouton et image */
@@ -10,57 +23,96 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #003366;
-  border-radius: 8px;
-  padding: 40px 20px;
-  margin-bottom: 20px;
-  color: #fff;
+  background: linear-gradient(120deg, var(--bleu-fonce) 70%, var(--bleu-moyen) 100%);
+  border-radius: 16px;
+  padding: 50px 30px 30px 30px;
+  margin-bottom: 30px;
+  color: var(--blanc);
+  box-shadow: 0 8px 32px rgba(0, 40, 85, 0.12);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Texte à gauche */
 .hero-text {
   flex: 1;
-  max-width: 550px;
+  max-width: 540px;
+  z-index: 2;
 }
 
 .hero-text h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #fff;
+  font-size: 2.8em;
+  margin-bottom: 22px;
+  color: var(--blanc);
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .hero-text p {
-  margin-bottom: 25px;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #fff;
+  margin-bottom: 28px;
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #e6e6e6;
 }
 
 .btn-orange {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #0055aa;
-  color: #fff;
+  padding: 14px 36px;
+  background-color: var(--orange);
+  color: var(--blanc);
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 8px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(255,136,0,0.10);
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 18px;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-orange:hover {
-  background-color: #003366;
+  background-color: var(--orange-hover);
+  transform: translateY(-2px) scale(1.04);
+  color: var(--blanc);
 }
 
-/* Image à droite */
 .hero-image {
   flex: 1;
-  padding-left: 30px;
+  padding-left: 40px;
+  min-width: 280px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border: 4px solid var(--blanc);
+}
+
+.presentation, .mission, .programmes {
+  background: var(--blanc);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,40,85,0.08);
+  padding: 28px 22px;
+  margin: 18px 0;
+}
+
+.presentation h2, .mission h2, .programmes h2 {
+  color: var(--bleu-fonce);
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.presentation p, .mission p, .programmes p {
+  color: #222b38;
+  font-size: 1.08em;
+  line-height: 1.6;
 }
 
 .social-icons {
@@ -68,7 +120,7 @@
 }
 
 .social-icons a {
-  color: #ffcc00;
+  color: var(--jaune);
   text-decoration: none;
   margin: 0 10px;
   font-size: 1.6em;
@@ -76,22 +128,22 @@
 }
 
 .social-icons a:hover {
-  color: #ffffff;
+  color: var(--blanc);
 }
 
 /* Partie body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: var(--gris-clair);
+  color: var(--gris-fonce);
   padding: 20px;
 }
 
 /* En-tête */
 header {
-  background-color: #003366;
-  color: #fff;
+  background-color: var(--bleu-fonce);
+  color: var(--blanc);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -116,7 +168,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--blanc);
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -126,7 +178,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #0055aa;
+  background-color: var(--bleu-moyen);
 }
 
 nav ul li a::after {
@@ -136,7 +188,7 @@ nav ul li a::after {
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--jaune);
   transition: width 0.3s ease-in-out;
 }
 
@@ -154,7 +206,7 @@ main, section {
 }
 
 h2 {
-  color: #003366;
+  color: var(--bleu-fonce);
   margin-bottom: 10px;
 }
 
@@ -183,7 +235,7 @@ th, td {
 
 /* Partie Formulaire */
 form {
-  background-color: #fff;
+  background-color: var(--blanc);
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
@@ -207,8 +259,8 @@ form textarea {
 
 form input[type="submit"],
 form button[type="submit"] {
-  background-color: #003366;
-  color: #fff;
+  background-color: var(--bleu-fonce);
+  color: var(--blanc);
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -219,7 +271,7 @@ form button[type="submit"] {
 
 form input[type="submit"]:hover,
 form button[type="submit"]:hover {
-  background-color: #0055aa;
+  background-color: var(--bleu-moyen);
 }
 
 /* Pied de page */
@@ -259,8 +311,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background: rgba(0, 40, 85, 0.7);
+  color: var(--blanc);
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -279,7 +331,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 40, 85, 0.85);
   display: none;
   justify-content: center;
   align-items: center;
@@ -341,8 +393,6 @@ footer {
     font-size: 0.95em;
     word-break: break-word;
   }
-}
-@media (max-width: 768px) {
   /* Ajustements pour les tableaux dans la section calendrier */
   .calendrier {
     overflow-x: auto;
@@ -353,27 +403,23 @@ footer {
     border-collapse: collapse;
     display: block;
     overflow-x: auto;
-    background: #fff;
-    }
-    .calendrier th,
-    .calendrier td {
+    background: var(--blanc);
+  }
+  .calendrier th,
+  .calendrier td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ccc;
-    white-space: nowrap; /* Empêche le retour à la ligne dans les cellules */
-    }
-    .calendrier th {
+    white-space: nowrap;
+  }
+  .calendrier th {
     background-color: #f2f2f2;
     font-weight: bold;
     position: sticky;
     top: 0;
-    z-index: 1; /* Assure que l'en-tête reste au-dessus du contenu lors du défilement */
-    }
-    .calendrier td {
-    background-color: #fff;
-    }
-    /* Rendre les tableaux scrollables horizontalement sur mobile */
-    .calendrier {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    }
+    z-index: 1;
+  }
+  .calendrier td {
+    background-color: var(--blanc);
+  }
+}
