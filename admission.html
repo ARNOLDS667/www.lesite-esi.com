@@ -85,5 +85,14 @@
             <p>Site réalisé par Soulama Arnold et Sanou Kevine</p>
         </div>
     </footer>
+    <!-- script pour indiquer l'envoi du formulaire -->
+    <script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    alert("Votre demande a bien été envoyée. Une réponse sera envoyée à l'adresse mail : " + email);
+    this.reset();
+});
+</script>
 </body>
 </html>
