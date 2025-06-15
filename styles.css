@@ -118,7 +118,7 @@
   color: #fff;
 }
 
-/* Partie body */
+/*body*/
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -219,7 +219,100 @@ th, td {
   padding: 10px;
   text-align: left;
 }
+/* Style pour la page Académie */
+.departements {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,51,102,0.08);
+  padding: 36px 24px;
+  margin: 32px auto;
+  max-width: 800px;
+}
 
+.departements h2 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.departements > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.departements > ul > li {
+  background: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,51,102,0.05);
+  padding: 24px 18px;
+  min-width: 220px;
+  flex: 1 1 220px;
+  max-width: 260px;
+  margin-bottom: 10px;
+}
+
+.departements strong {
+  display: block;
+  color: #ff8800;
+  font-size: 1.15em;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.departements ul ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.departements ul ul li {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.departements .btn-orange {
+  width: 90%;
+  max-width: 220px;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1em;
+  padding: 12px 0;
+  background-color: #ff8800;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255,136,0,0.08);
+  border: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.departements .btn-orange:hover {
+  background-color: #ff9900;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .departements > ul {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .departements > ul > li {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
 /* Partie Formulaire */
 form {
   background-color: #fff;
